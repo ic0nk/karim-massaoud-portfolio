@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    --background-color: #050B0D;
+    --font: #F0F2F2;
+    --text: #A1A5A6;
+    --color: #0D2626;
+    --color0: #5F7373;
+    --color1: #c71d48;
+    background-color: var(--background-color);
+    font-family: "Ubuntu", serif;
+    height: 100vh;
+}
+
+/*header section*/
+header {
+    position: fixed;
+    padding: 12px 0;
+    padding-top: 27px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-head {
+    max-width: 450px;
+    animation: 3s slide-down ease-in-out;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100px);
+        max-width: 0;
+    }
+    40% {
+        transform: translateY(0);
+    }
+    100% {
+        max-width: 450px;
+    }
+}
+
+    .head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        column-gap: 20px;
+        list-style: none;
+        flex-basis: 100%;
+        padding: 0px 0;
+        border-radius: 30px;
+        background-color: var(--background-color);
+    }
+
+    @property --angle{
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+      
+      .head::after, .head::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: conic-gradient(from var(--angle), transparent 10%, var(--color1));
+        z-index: -1;
+        padding: 3px;
+        border-radius: 30px;
+        animation: 3s spin linear infinite;
+      }
+      .head::before{
+        filter: blur(1.5rem);
+        opacity: 0.5;
+      }
+      @keyframes spin{
+        0%{
+          --angle: 0deg;
+        }
+        100%{
+          --angle: 360deg;
+        }
+      }
+
+    .head li {
+        padding: 10px 15px;
+    }
+
+    .head li a {
+        display: inline-block;
+        position: relative;
+        font-weight: bold;
+        color: var(--font);
+        transition: color ease-in-out;
+        animation-name: fede-in;
+        animation-duration: 1.2s;
+        animation-delay: 1.8s;
+        animation-fill-mode: backwards;
+        animation-timing-function: ease-in;
+    }
+
+    .head li a.active {
+        color: var(--color1);
+    }
+
+    .head li a:hover {
+        color: var(--color1);
+    }
+
+    @keyframes fede-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+    .head li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--color1);
+        transition: 0.15s ease-in-out;
+    }
+
+    .head li a:hover:after {
+        width: 100%;
+    }
+
+.Hero {
+    height: 100vh;
+    flex-basis: 100%;
+    background-image: radial-gradient(circle 200px at top, #f0f2f200, #050b0d9d), url("img/fbc6f31bd3b84159470b973aca7e0f97_gif 1,920 × 1,080 pixels.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.3 ease-in-out;
+}
+
+.Hero:hover {
+    background-image: radial-gradient(circle 200px at top, #50b7c231, #050b0da6), url("img/fbc6f31bd3b84159470b973aca7e0f97_gif 1,920 × 1,080 pixels.gif");
+}
+
+.text-section {
+    color: var(--font);
+    flex-basis: 35%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 90px;
+    padding-top: 100px;
+    background-image: radial-gradient(circle 150px at left, transparent, transparent);
+    transition: 0.3 ease-in-out;
+}
+
+.text-section:hover {
+    background-image: radial-gradient(circle 150px at left, #50b7c231, transparent);
+}
+
+.text-section h3 {
+    font-size: 80px;
+    text-transform: uppercase;
+    translate: -500px 0;
+    color: var(--font);
+    animation-name: slide-left;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-left {
+    from {
+        translate: -500px 0;
+        color: transparent;
+    }
+
+    to {
+        translate: 0 0;
+        color: var(--font);
+    }
+}
+
+.text-section h1 {
+    position: relative;
+    color: var(--color1);
+    top: 25px;
+    left: 10px;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0 0;
+    translate: 0 50px;
+    animation-name: slide-top;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-top {
+    from {
+        translate: 0 50px;
+        color: transparent;
+    }
+
+    to {
+        translate: 0 0;
+        color: var(--color1);
+    }
+}
+
+.text-section p {
+    position: relative;
+    font-weight: 200;
+    bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 7.5px;
+    color: var(--font);
+    transition: 0.5 ease-in-out;
+    translate: 0 -50px;
+    animation-name: slide-bottom;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-bottom {
+    from {
+        translate: 0 -50px;
+        color: transparent;
+    }
+
+    to {
+        translate: 0 0;
+        color: var(--font);
+    }
+}
+
+.text-section p:hover {
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.btn {
+    position: relative;
+    left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 50px;
+    margin-top: 15px;
+}
+
+
+.button {
+    padding: 9px 20px;
+    width: 60px;
+    text-align: center;
+    font-size: 15px;
+    border: solid 2px var(--text);
+    border-radius: 30px;
+    color: var(--text);
+    font-weight: bold;
+    background-color: transparent;
+    transition: 0.5s ease;
+    cursor: pointer;
+    animation-name: fede-inn;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes fede-inn {
+    from {
+        color: transparent;
+        border: solid 2px transparent;
+    }
+
+    to {
+        color: var(--text);
+        border: solid 2px var(--text);
+    }
+}
+
+
+.button:hover {
+    background-color: var(--color1);
+    color: var(--font);
+    border: solid 2px transparent;
+    translate: 0 -5px;
+}
+
+.social-media {
+    margin-left: 50px;
+    height: 10%;
+    background-image: radial-gradient(circle 75px at bottom, transparent, transparent);
+}
+
+.social-media:hover {
+    background-image: radial-gradient(circle 75px at bottom, #50b7c231, transparent);
+}
+
+.social-media a {
+    padding: 4px;
+}
+
+
+.fa-brands, .fa-solid{
+    font-size: 30px;
+    color: var(--font);
+    translate: 0 0;
+    transition: 0.3s ease;
+    animation-name: slide-from-bottom;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.fa-brands:hover {
+    transform: scale(1.1);
+    translate: 0 -5px;
+    color: var(--color1);
+}
+
+.fa-solid:hover {
+    transform: scale(1.1);
+    translate: 0 -5px;
+    color: var(--color1);
+}
+
+
+@keyframes slide-from-bottom {
+    from {
+        display: none;
+        translate: 0 100px;
+    }
+
+    to {
+        display: block;
+        translate: 0 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .head {
+        column-gap: 0px;
+    }
+
+    .head li {
+        padding: 10px 10px;
+    }
+
+    .text-section {
+        padding-left: 35px;
+        align-self: center;
+        padding-left: 0;
+    }
+
+    .text-section:hover {
+        background-image: radial-gradient(circle 150px at left, transparent, transparent);
+    }
+
+    .social-media {
+        align-self: center;
+        margin-left: 0;
+    }
+
+}
