@@ -10,7 +10,7 @@ body {
     --text: #A1A5A6;
     --color: #0D2626;
     --color0: #5F7373;
-    --color1: #c71d48;
+    --color1: #008080;
     background-color: var(--background-color);
     font-family: "Ubuntu", serif;
     height: 100vh;
@@ -343,7 +343,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    display: none;
 }
 
 .pic img {
@@ -353,7 +352,6 @@ p {
     animation-delay: 1s;
     animation-fill-mode: both;
     z-index: -2;
-    display: none;
 }
 
 @keyframes pic-slide {
@@ -378,7 +376,6 @@ p {
     .text-section {
         padding-left: 35px;
         align-self: center;
-        padding-left: 0;
     }
 
     .text-section:hover {
@@ -395,7 +392,7 @@ p {
     }
 
     .pic {
-        height: 50%;
+        height: 100%;
         align-items: flex-start;
         padding-top: 100px;
     }
@@ -404,6 +401,7 @@ p {
         width: 180px;
         position: relative;
         right: 40px;
+        object-position: center;
     }
 
     @keyframes pic-slide {
