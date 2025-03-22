@@ -140,10 +140,10 @@ header {
         width: 100%;
     }
 
-/*Projects section*/
+/*Learning-Outcomes-section*/
 
 
-.Projects-section h2, .templates-section h2 {
+.Learning-Outcomes-section h2, .templates-section h2 {
     color: var(--color1);
     text-align: center;
     padding: 20px 0;

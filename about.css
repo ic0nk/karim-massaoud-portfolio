@@ -63,9 +63,9 @@ header {
         syntax: "<angle>";
         initial-value: 0deg;
         inherits: false;
-      }
-      
-      .head::after, .head::before{
+    }
+    
+    .head::after, .head::before{
         content: '';
         position: absolute;
         height: 100%;
@@ -75,19 +75,19 @@ header {
         padding: 3px;
         border-radius: 30px;
         animation: 3s spin linear infinite;
-      }
-      .head::before{
+    }
+    .head::before{
         filter: blur(1.5rem);
         opacity: 0.5;
-      }
-      @keyframes spin{
+        }
+    @keyframes spin{
         0%{
-          --angle: 0deg;
+            --angle: 0deg;
         }
         100%{
-          --angle: 360deg;
+            --angle: 360deg;
         }
-      }
+    }
 
     .head li {
         padding: 10px 15px;
