@@ -18,7 +18,7 @@ body {
 
 /*header section*/
 header {
-    position: relative;
+    position: fixed;
     padding: 12px 0;
     padding-top: 27px;
     width: 100%;
@@ -27,7 +27,7 @@ header {
 }
 
 .main-head {
-    max-width: 450px;
+    max-width: 500px;
     animation: 3s slide-down ease-in-out;
 }
 
@@ -74,12 +74,10 @@ header {
         border-radius: 30px;
         animation: 3s spin linear infinite;
     }
-
     .head::before{
         filter: blur(1.5rem);
         opacity: 0.5;
     }
-
     @keyframes spin{
         0%{
             --angle: 0deg;
@@ -106,7 +104,7 @@ header {
         animation-timing-function: ease-in;
     }
 
-    .head li a.active0 {
+    .head li a.active {
         color: var(--color1);
     }
 
@@ -140,286 +138,223 @@ header {
         width: 100%;
     }
 
-/*Learning-Outcomes-section*/
-
-
-.Learning-Outcomes-section h2, .templates-section h2 {
-    color: var(--color1);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 35px;
-    text-transform: uppercase;
-}
-
-.templates-section {
-    padding-top: 40px;
-}
-
-.Projects-section {
-    padding-top: 20px;
-}
-
-.main {
+.Hero {
+    height: 100vh;
+    flex-basis: 100%;
+    background-image: radial-gradient(circle 200px at top, #f0f2f200, #050b0d9d), url(img/Project\ Backgrouund.png);
+    background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.3 ease-in-out;
 }
 
-    .card, .card0 {
-        width: 350px;
-        height: 430px;
-        background-color: var(--font);
-        border-radius: 20px;
-        position: relative;
+.Hero:hover {
+    background-image: radial-gradient(circle 200px at top, #50b7c231, #050b0da6), url(img/Project\ Backgrouund.png);
+}
+
+.text-section {
+    color: var(--font);
+    flex-basis: 35%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 90px;
+    padding-top: 100px;
+    background-image: radial-gradient(circle 150px at left, transparent, transparent);
+    transition: 0.3 ease-in-out;
+}
+
+.text-section:hover {
+    background-image: radial-gradient(circle 150px at left, #50b7c231, transparent);
+}
+
+.text-section h3 {
+    font-size: 80px;
+    text-transform: uppercase;
+    translate: -500px 0;
+    color: var(--font);
+    animation-name: slide-left;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-left {
+    from {
+        translate: -500px 0;
+        color: transparent;
     }
 
-    .card0 {
-        background-color: var(--text);
-    }
-
-    @property --angle{
-        syntax: "<angle>";
-        initial-value: 0deg;
-        inherits: false;
-    }
-    
-    .card::after, .card::before{
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-image: conic-gradient(from var(--angle), transparent 90%, var(--color1));
-        z-index: -1;
-        padding: 3px;
-        border-radius: 20px;
-        animation: 3s spin linear infinite;
-    }
-
-    .card0::after, .card0::before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-image: conic-gradient(from var(--angle), transparent 90%, var(--color0));
-        z-index: -1;
-        padding: 3px;
-        border-radius: 20px;
-        animation: 3s spin linear infinite;
-    }
-
-    .card::before, .card0::before{
-        filter: blur(1.5rem);
-        opacity: 0.5;
-    }
-
-    .mysildes {
-        display: none;
-    }
-
-    .card img, .card0 img {
-        vertical-align: middle;
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-
-    .slideshow-container {
-        position: relative;
-        margin: auto;
-    }
-
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
+    to {
+        translate: 0 0;
         color: var(--font);
-        font-weight: bold;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        transition: 0.3s ease-in-out;
+    }
+}
+
+.text-section h1 {
+    position: relative;
+    color: var(--color1);
+    top: 15px;
+    left: 10px;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0 0;
+    translate: 0 50px;
+    animation-name: slide-top;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-top {
+    from {
+        translate: 0 50px;
+        color: transparent;
     }
 
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    .next:hover {
-        transform: translateX(5px);
+    to {
+        translate: 0 0;
         color: var(--color1);
-        scale: 1.2;
+    }
+}
+
+.text-section p {
+    position: relative;
+    font-weight: 200;
+    bottom: 10px;
+    font-size: 28px;
+    letter-spacing: 7.5px;
+    color: var(--font);
+    transition: 0.5 ease-in-out;
+    translate: 0 -50px;
+    animation-name: slide-bottom;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-bottom {
+    from {
+        translate: 0 -50px;
+        color: transparent;
     }
 
-    .prev:hover {
-        transform: translateX(-5px);
-        scale: 1.2;
-        color: var(--color1);
-    }
-
-    .main-dot {
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 0;
-    }
-
-    .dot {
-        cursor: pointer;
-        height: 8px;
-        width: 8px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .active, .dot:hover {
-        background-color: var(--color1);
-    }
-
-    .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5;
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-
-    @-webkit-keyframes fade {
-        0% {
-            opacity: 0.4;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fade {
-        0% {
-            opacity: 0.4;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .contact {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: nowrap;
-    }
-
-    .contact .btn {
-        color: var(--background-color);
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        float: right;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 500;
-        transition: all 0.3s ease-in-out;
-        margin-top: 10px;
-        margin-right: 10px;
-    }
-
-    .contact .btn a i {
-        text-align: center;
+    to {
+        translate: 0 0;
         color: var(--font);
-        margin: 0 0;
+    }
+}
+
+.text-section p:hover {
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.btn {
+    position: relative;
+    left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 50px;
+    margin-top: 15px;
+}
+
+
+.button {
+    padding: 9px 20px;
+    width: 70%;
+    text-align: center;
+    font-size: 15px;
+    border: solid 2px var(--text);
+    border-radius: 30px;
+    color: var(--text);
+    font-weight: bold;
+    background-color: transparent;
+    transition: 0.5s ease;
+    cursor: pointer;
+    animation-name: fede-inn;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes fede-inn {
+    from {
+        color: transparent;
+        border: solid 2px transparent;
     }
 
-    .contact a {
-        position: relative;
-    }
-
-    .contact a::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--color1);
-        transition: 0.15s ease-in-out;
-    }
-
-    .contact a:hover::after {
-        width: 100%;
-    }
-
-    .contact .btn:hover {
-        background-color: transparent;
-        color: var(--color1);
-        transform: translateX(5px);
-    }
-
-    .contact p {
-        width: 300px;
-        height: 120px;
-        color: var(--background-color);
-    }
-
-    .contact h3 {
-        color: var(--color1);
-        text-transform: uppercase;
-    }
-
-    .card4 {
-        color: var(--color1);
-        font-size: 45px;
-        text-transform: uppercase;
-        display: none;
-    }
-
-    .templates-section {
-        padding-bottom: 50px;
-    }
-
-    .social-media {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        gap: 8px;
-        bottom: 50px;
-        padding: 10px;
-        padding-left: 20px;
-        z-index: 100;
-        background-color: #f0f2f23d;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-
-    .social-media a i {
-        font-size: 25px;
+    to {
         color: var(--text);
-        transition: all 0.2s ease-in-out;
+        border: solid 2px var(--text);
+    }
+}
+
+
+.button:hover {
+    background-color: var(--color1);
+    color: var(--font);
+    border: solid 2px transparent;
+    translate: 0 -5px;
+}
+
+.social-media {
+    margin-left: 50px;
+    height: 10%;
+    background-image: radial-gradient(circle 75px at bottom, transparent, transparent);
+}
+
+.social-media:hover {
+    background-image: radial-gradient(circle 75px at bottom, #50b7c231, transparent);
+}
+
+.social-media a {
+    padding: 4px;
+}
+
+
+.fa-brands, .fa-solid{
+    font-size: 30px;
+    color: var(--font);
+    translate: 0 0;
+    transition: 0.3s ease;
+    animation-name: slide-from-bottom;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.fa-brands:hover {
+    transform: scale(1.1);
+    translate: 0 -5px;
+    color: var(--color1);
+}
+
+.fa-solid:hover {
+    transform: scale(1.1);
+    translate: 0 -5px;
+    color: var(--color1);
+}
+
+
+@keyframes slide-from-bottom {
+    from {
+        display: none;
+        translate: 0 100px;
     }
 
-    .social-media a i:hover {
-        color: var(--color1);
-        transform: translateX(5px);
-        scale: 1.3;
+    to {
+        display: block;
+        translate: 0 0;
     }
+}
 
-/*Responsive design*/
-@media (max-width: 750px) {
+
+@media (max-width: 600px) {
     .head {
         column-gap: 0px;
     }
@@ -428,26 +363,27 @@ header {
         padding: 10px 10px;
     }
 
-    .main{
-        flex-direction: column;
-        gap: 50px 0;
+    .text-section {
+        padding-left: 35px;
+        align-self: center;
+        padding-left: 0;
     }
+
+    .text-section:hover {
+        background-image: radial-gradient(circle 150px at left, transparent, transparent);
+    }
+
+    .social-media {
+        align-self: center;
+        margin-left: 0;
+    }
+
+    .text-section h3 {
+        font-size: 65px;
+    }
+
+    .button {
+        font-size: 12.5px;
+    }
+
 }
-
-@media (min-width: 751px) and (max-width: 1266px) {
-    .main{
-        display: grid;
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-        gap: 25px;
-        row-gap: 50px;
-        justify-items: center;
-        align-items: center;
-    }
-
-    .card4 {
-        display: block;
-        width: 350px;
-    }
-
-}
-

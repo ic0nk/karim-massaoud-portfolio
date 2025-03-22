@@ -172,7 +172,7 @@ header {
 }
 
 .text-section h3 {
-    font-size: 80px;
+    font-size: 60px;
     text-transform: uppercase;
     translate: -500px 0;
     color: var(--font);
