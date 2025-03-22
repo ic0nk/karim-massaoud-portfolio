@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createCounter('counter-wordpress', 95); 
     createCounter('counter-arabic', 100);
     createCounter('counter-english', 90);
-    createCounter('counter-german', 25);
+    createCounter('counter-german', 80);
 });
 
 

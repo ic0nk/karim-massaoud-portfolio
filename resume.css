@@ -13,7 +13,7 @@ body {
     --color1: #008080;
     background-color: var(--background-color);
     font-family: "Ubuntu", serif;
-    background-image: radial-gradient(circle 600px at right, #f0f2f211, #050B0D), url("img/pexels-harold-vasquez-853421-2653362.jpg");
+    background-image: radial-gradient(circle 1000px at left, #f0f2f22f, #050b0d), url("img/pexels-harold-vasquez-853421-2653362.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -464,7 +464,7 @@ header {
                 width: 0%;
             }
             100% {
-                width: 25%;
+                width: 80%;
             }
         }
 
