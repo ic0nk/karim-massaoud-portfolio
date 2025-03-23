@@ -30,7 +30,7 @@ header {
 }
 
 .main-head {
-    max-width: 450px;
+    max-width: 500px;
     animation: 3s slide-down ease-in-out;
 }
 

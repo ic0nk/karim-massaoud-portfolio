@@ -235,6 +235,7 @@ header {
     animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: both;
+    padding-bottom: 10px;
 }
 
 @keyframes slide-bottom {
@@ -251,22 +252,18 @@ header {
 
 .text-section p:hover {
     letter-spacing: 0;
-    text-align: center;
 }
 
 .btn {
     position: relative;
-    left: 10px;
     display: flex;
     justify-content: flex-start;
-    column-gap: 50px;
-    margin-top: 15px;
+    column-gap: 40px;
 }
 
 
 .button {
     padding: 9px 20px;
-    width: 70%;
     text-align: center;
     font-size: 15px;
     border: solid 2px var(--text);
