@@ -381,6 +381,14 @@ header {
         text-transform: uppercase;
     }
 
+    #Lo1 {
+        font-size: 17px;
+    }
+
+    #Lo2 {
+        font-size: 16px;
+    }
+
     .card4 {
         color: var(--color1);
         font-size: 45px;
