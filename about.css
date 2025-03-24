@@ -26,11 +26,12 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 .main-head {
-    max-width: 500px;
-    animation: 3s slide-down ease-in-out;
+    max-width: 680px;
+    animation: 2.5s slide-down ease-in-out;
 }
 
 @keyframes slide-down {
@@ -42,7 +43,7 @@ header {
         transform: translateY(0);
     }
     100% {
-        max-width: 450px;
+        max-width: 680px;
     }
 }
 
@@ -79,7 +80,7 @@ header {
     .head::before{
         filter: blur(1.5rem);
         opacity: 0.5;
-        }
+    }
     @keyframes spin{
         0%{
             --angle: 0deg;
@@ -89,11 +90,60 @@ header {
         }
     }
 
-    .head li {
+    .head .menu {
+        position: relative;
+    }
+
+    .head .submenu {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 180px;
+        background-color: var(--background-color);
+        padding: 10px;
+        border-radius: 10px;
+        display: none;
+        z-index: 100;
+    }
+
+    .head .menu:hover .submenu {
+        display: block;
+    }
+
+    #submenu0::before {
+        left:165px;
+    }
+
+    .submenu li {
+        list-style: none;
+        padding: 5px;
+    }
+
+    .head .submenu li a{
+        animation-delay: 0s;
+        animation-duration: 0.2s;
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+
+    .submenu::before{
+        content: "";
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid var(--font);
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: 80px;
+        top: -6px;
+    }
+
+    .head > li {
         padding: 10px 15px;
     }
 
-    .head li a {
+    .head > li a {
         display: inline-block;
         position: relative;
         font-weight: bold;
@@ -104,6 +154,11 @@ header {
         animation-delay: 1.8s;
         animation-fill-mode: backwards;
         animation-timing-function: ease-in;
+    }
+
+    .head .menu a i {
+        font-size: 15px;
+        color: var(--color1);
     }
 
     .head li a.active {
@@ -138,6 +193,29 @@ header {
 
     .head li a:hover:after {
         width: 100%;
+    }
+
+    .open-menu,
+    .close-menu {
+        position: absolute;
+        color: var(--color1);
+        cursor: pointer;
+        font-size: 2rem;
+        display: none;
+    }
+
+    .open-menu {
+        top: 50%;
+        right: 25px;
+    }
+
+    .close-menu {
+        top: 20px;
+        right: 20px;
+    }
+
+    #check {
+        display: none;
     }
 
 .about {
@@ -367,10 +445,74 @@ p {
 @media screen and (max-width: 600px) {
     .head {
         column-gap: 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 60%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: transparent;
+        background-image: linear-gradient(180deg, var(--background-color) 50%, transparent);
+        transition: all 0.5s ease;
+        border-radius: 0px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding-top: 40px;
+    }
+
+    .main-head {
+        animation: none;
+    }
+
+    .head::after, .head::before {
+        display: none;
     }
 
     .head li {
         padding: 10px 10px;
+        margin-top: 10px;
+    }
+
+    .head li a {
+        font-size: 12px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.head {
+        right: 0;
+    }
+
+    .head .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .head .submenu {
+        position: static;
+        background-color: transparent;
+        width: 230px;
+        text-align: center;
+    }
+
+    .head .submenu li a {
+        font-size: 12px;
+    }
+
+    #submenu0::before {
+        display: none;
+    }
+
+    .submenu::before {
+        display: none;
     }
 
     .text-section {

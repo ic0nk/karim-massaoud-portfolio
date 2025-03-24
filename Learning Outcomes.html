@@ -18,12 +18,34 @@
 <body>
     <header>
         <div class="main-head">
+            <input type='checkbox' id='check' />
             <ul class="head">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
+                <li><a href="About.html">About</i></a></li>
                 <li><a href="Resume.html">Resume</a></li>
-                <li><a href="Learning Outcomes.html">Learning Outcomes</a></li>
+                <li class="menu">
+                    <a href="#">Projects <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">create that UX</a></li>
+                        <li><a href="#">personal project</a></li>
+                        <li><a href="#">development project</a></li>
+                    </ul>
+                </li>
+                <li class="menu">
+                    <a href="Learning Outcomes.html">Learning Outcomes <i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="submenu" id="submenu0">
+                        <li><a href="#">LO1: Interactive Media Products</a></li>
+                        <li><a href="#">LO2: Iterative Design</a></li>
+                        <li><a href="#">LO3: Development & version control</a></li>
+                        <li><a href="#">LO4: Professional Standard</a></li>
+                        <li><a href="#">LO5: Personal Leadership</a></li>
+                        <li><a href="#">User Research</a></li>
+                    </ul>
+                </li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
         </div>
     </header>
 
