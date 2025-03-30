@@ -159,14 +159,13 @@ header {
 
     .head .menu a i {
         font-size: 15px;
-        color: var(--color1);
     }
 
     .head li a.active {
         color: var(--color1);
     }
 
-    .head li a:hover {
+    .head .btnn:hover {
         color: var(--color1);
     }
 
@@ -879,14 +878,14 @@ header {
         }
     }
 
-    .btn i {
+    .btn > i {
         padding: 0 0;
         border: solid 0 transparent;
         border-radius: 0;
         font-size: 15px;
     }
 
-    .btn i:hover {
+    .btn > i:hover {
         color: var(--text);
     }
 
@@ -946,7 +945,7 @@ header {
     }
 }
 
-.logo i {
+.logo1 > i {
     color: var(--font);
     padding: 6px 5px;
     font-size: 25px;
@@ -961,7 +960,7 @@ header {
     animation-timing-function: ease-in-out  
 }
 
-.fa-solid:hover {
+.logo1 > i:hover {
     transform: translateY(-5px);
     scale: 1.1;
 }
