@@ -158,7 +158,7 @@ header {
         font-size: 15px;
     }
 
-    .head li a.active {
+    .head li a#active {
         color: var(--color1);
     }
 
