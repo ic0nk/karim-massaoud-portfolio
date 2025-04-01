@@ -584,7 +584,72 @@ header {
         color: var(--color1);
     }
 
+    .guide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        flex-wrap: wrap;
+    }
 
+    .branding-guide {
+        position: relative;
+        width: 50%;
+        height: 800px;
+    }
+
+    .image8 {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image8 > img {
+        width: 55%;
+        min-width: 250px;
+    }
+    
+    .branding-guide::after {
+        content: "";
+        width: 2px;
+        height: 40%;
+        right: 0;
+        top: 0;
+        background-color: var(--font);
+        position: absolute;
+        align-self: anchor-center;
+    }
+
+    .guide h2 {
+        color: var(--color1);
+        font-size: 45px;
+    }
+
+    .logos00 {
+        width: 50%;
+        height: 800px;
+    }
+
+    .logos-4 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+    }
+
+    .logos-4 > img {
+        width: 50%;
+        min-width: 100px;
+        object-fit: fill;
+    }
+
+    #logos-1, #logos-3 {
+        justify-self: flex-end;
+    }
+
+    #logos-2, #logos-1 {
+        align-self: flex-end;
+    }
 
 /* responsive design for mobile */
 @media screen and (max-width: 600px) {
@@ -690,28 +755,82 @@ header {
         height: 100%;
     }
 
+    .branding > h2 {
+        font-size: 30px;
+    }
+
     /* pop-up section */
     .closeButton {
         top: 285px;
     }
+
+    /* guide-section */
+    .branding-guide::after {
+        display: none;
+    }
     
+    .guide h2 {
+        font-size: 30px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .branding-guide {
+        width: 100%;
+        height: 100%;
+        padding: 50px 0;
+    }
+
+    .logos00 {
+        width: 100%;
+        height: 100%;
+        padding: 50px 0;
+    }
 }
 
 /* responsive design for tablet */
 @media screen and (min-width: 601px) and (max-width: 900px) {
 
-        /* GALLERY-section */
-        .container {
-            height: 450px;
-        }
+    /* GALLERY-section */
+    .container {
+        height: 450px;
+    }
     
-        input:checked + label {
-            width: 350px;
-        }
+    input:checked + label {
+        width: 350px;
+    }
 
-        .card {
-            width:70px;
-        }
+    .card {
+        width:70px;
+    }
+
+    /* BRANDING-section */
+    .branding > h2 {
+        font-size: 35px;
+    }
+
+    /* guide-section */
+    .branding-guide::after {
+        display: none;
+    }
+
+    .guide h2 {
+        font-size: 35px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .branding-guide {
+        width: 100%;
+        height: 100%;
+        padding: 50px 0;
+    }
+
+    .logos00 {
+        width: 100%;
+        height: 100%;
+        padding: 50px 0;
+    }
 }
 
 /* responsive design for laptop */
@@ -729,5 +848,10 @@ header {
     /* BRANDING-section */
     .grid-text::after {
         display: none;
+    }
+
+    /* guide-section */
+    .branding-guide, .logos00 {
+        width: 45%;
     }
 }

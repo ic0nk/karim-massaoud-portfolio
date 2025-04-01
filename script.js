@@ -162,4 +162,3 @@ window.onresize = function(event) {
     reloadSlider();
 };
 
-// popup img for slider
