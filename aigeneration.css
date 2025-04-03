@@ -225,8 +225,8 @@ header {
         background-position: center;
         background-attachment: fixed;
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
+        justify-content: center;
+        align-items: center;
         background-color: rgba(0, 0, 0, 0.671);
         background-blend-mode: multiply;
     }
@@ -235,5 +235,51 @@ header {
         font-size: 55px;
         font-weight: 700;
         color: var(--font);
-        padding: 80px;
+        padding: 80px; 
     }
+
+    .ai-labels {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+        align-items: center;
+      }
+      
+      .ai-labels .box {
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 2rem 1.5rem;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+      
+      .ai-labels .icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.8rem;
+      }
+      
+      .ai-labels .label {
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+      
+      .ai-labels .lazy .label,
+      .ai-labels .piggybacker .label,
+      .ai-labels .cyborg .label,
+      .ai-labels .manmade .label {
+        color: rgb(255, 0, 0);
+      }
+      
+      .ai-labels .handyman .label {
+        color: rgb(18, 145, 37);
+      }
+      
