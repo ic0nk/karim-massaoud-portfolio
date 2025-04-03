@@ -386,6 +386,7 @@ header {
     /* Feedback section */
     .feedback {
         color: var(--font);
+        margin-bottom: 80px;
     }
 
     .feedback > h2 {
@@ -421,9 +422,59 @@ header {
     .flex-image img {
         cursor: pointer;
         border: solid 3px var(--color1);
+        object-fit: cover;
     }
 
     .flex-image img:hover {
+        box-shadow: 0 0 20px 3px var(--color1);
+    }
+
+    /* result section */
+    .result {
+        color: var(--font);
+    }
+
+    .result > h2 {
+        font-size: 40px;
+        color: var(--color1);
+        position: relative;
+        padding-left: 11%;
+    }
+
+    .result > h2::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 89%;
+        top: 0;
+        right: 0;
+        background-color: var(--font);
+    }
+
+    .images-flex1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .flex-image1 {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        row-gap: 10px;
+        justify-content: flex-end;
+        width: 100%;
+        margin-right: 8%;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .flex-image1 img {
+        cursor: pointer;
+        border: solid 3px var(--color1);
+    }
+
+    .flex-image1 img:hover {
         box-shadow: 0 0 20px 3px var(--color1);
     }
 
