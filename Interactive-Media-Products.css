@@ -250,7 +250,7 @@ header {
     
     .LO1>h2 {
         font-size: 40px;
-        color: var(--font);
+        color: var(--color1);
         text-transform: uppercase;
         padding-left: 40px;
         position: relative;
@@ -263,7 +263,7 @@ header {
         width: 40%;
         bottom: 0;
         left: 0;
-        background-color: var(--color1);
+        background-color: var(--font);
     }
     
     .LO1-continer {
@@ -321,6 +321,60 @@ header {
         -webkit-text-stroke: 1px #ffffff94;
     }
 
+    /* what i learned */
+    .WHAT-I-LEARNED {
+        color: var(--font);
+        margin-top: 80px;
+        margin-bottom: 80px;
+        height: 400px;
+    }
+
+    .WHAT-I-LEARNED > h2 {
+        font-size: 40px;
+        color: var(--color1);
+        text-transform: uppercase;
+        padding-left: 40px;
+        position: relative;
+    }
+
+    .WHAT-I-LEARNED > h2::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 80%;
+        bottom: 0;
+        right: 0;
+        background-color: var(--font);
+    }
+
+    .WHAT-I-LEARNED > p {
+        margin: 30px 80px;
+        font-size: 20px;
+        height: 300px;
+        overflow: auto;
+        padding: 15px;
+    }
+
+    body p::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    body p::-webkit-scrollbar-thumb {
+        background: var(--text);
+        border-radius: 10px;
+    }
+
+    body p::-webkit-scrollbar-thumb:hover {
+        background: var(--color1);
+    }
+
+    /* WHY IT MATTERS TO ME */
+    .why > h2::after {
+        width: 34%;
+        left: 0;
+    }
+
+/* ------------------------------------------------------------------ */
 /* mobile responsive */
 @media (max-width: 600px) {
     .head {
@@ -395,4 +449,43 @@ header {
         display: none;
     }
 
+    /* LO1 */
+    .LO1>h2 {
+        font-size: 30px;
+        padding-left: 30px;
+    }
+
+    .grid-text {
+        padding: 30px;
+    }
+
+    .grid-text h2 {
+        font-size: 20px;
+    }
+
+    .grid-text {
+        padding: 10px;
+    }
+
+    .grid-text h2 {
+        font-size: 18px;
+    }
+
+    .grid-text p {
+        font-size: 15px;
+    }
+
+    #num span {
+        font-size: 40px;
+        padding: 5px 5px;
+    }
+
+    /* what i learned */
+    .WHAT-I-LEARNED > h2 {
+        font-size: 30px;
+        padding-left: 30px;
+    }
+    .WHAT-I-LEARNED > p {
+        margin: 30px 10px;
+    }
 }
