@@ -348,12 +348,11 @@ header {
     }
 
     .WHAT-I-LEARNED > p {
-        margin: 30px 80px;
+        margin: 30px 11%;
         font-size: 20px;
         height: 300px;
         overflow: auto;
         padding: 15px;
-        width: 80%;
     }
 
     .image22 {
@@ -382,6 +381,50 @@ header {
     .why > h2::after {
         width: 34%;
         left: 0;
+    }
+
+    /* Feedback section */
+    .feedback {
+        color: var(--font);
+    }
+
+    .feedback > h2 {
+        font-size: 40px;
+        color: var(--color1);
+        position: relative;
+        padding-left: 11%;
+    }
+
+    .feedback > h2::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 22.5%;
+        bottom: 0;
+        left: 0;
+        background-color: var(--font);
+    }
+
+    .images-flex {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .flex-image {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .flex-image img {
+        cursor: pointer;
+        border: solid 3px var(--color1);
+    }
+
+    .flex-image img:hover {
+        box-shadow: 0 0 20px 3px var(--color1);
     }
 
 /* ------------------------------------------------------------------ */
