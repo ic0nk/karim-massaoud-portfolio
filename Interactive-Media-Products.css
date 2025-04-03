@@ -238,6 +238,89 @@ header {
         padding: 80px;
     }
 
+    /* LO1 */
+    .LO1 {
+        margin-top: 80px;
+        color: var(--font);
+    }
+    .how-it-works-section {
+        height: auto;
+        margin: 100px 0;
+    }
+    
+    .LO1>h2 {
+        font-size: 40px;
+        color: var(--font);
+        text-transform: uppercase;
+        padding-left: 40px;
+        position: relative;
+    }
+
+    .LO1 > h2::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 40%;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color1);
+    }
+    
+    .LO1-continer {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 650px));
+        justify-content: center;
+        margin: 50px 0;
+    }
+    
+    .grid1, .grid2, .grid3, .grid4 {
+        display: flex;
+    }
+
+    .LO1-continer h2 {
+        color: var(--color1);
+    }
+    
+    .grid1, .grid2 {
+        border-bottom: var(--font) 1px solid;
+    }
+    
+    .grid1, .grid3 {
+        border-right: var(--font) 1px solid;
+    }
+    
+    .grid-n-1 {
+        align-self: flex-end;
+    }
+    
+    .grid-n-2 {
+        align-self: flex-end;
+    }
+    
+    .grid-text h2 {
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+
+    .grid-text p {
+        height: 250px;
+        overflow: auto;
+    }
+    
+    .grid-text {
+        justify-self: center;
+        align-self: flex-start;
+        height: 350px;
+    }
+    
+    #num span {
+        display: inline-block;
+        font-size: 55px;
+        padding: 10px 20px;
+        color: transparent;
+        -webkit-text-stroke: 1px #ffffff94;
+    }
+
 /* mobile responsive */
 @media (max-width: 600px) {
     .head {
