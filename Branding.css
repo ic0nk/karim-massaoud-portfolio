@@ -320,16 +320,13 @@ header {
     }
     
     .card[for="c1"] {
-        background-image: url(img/pppppp.png);
+        background-image: url(img/Owen\ bryce1.png);
     }
     .card[for="c2"] {
-        background-image: url(img/pppppp.png);
+        background-image: url(img/Owen\ bryce2.png);
     }
     .card[for="c3"] {
-        background-image: url(img/pppppp.png);
-    }
-    .card[for="c4"] {
-        background-image: url(img/pppppp.png);
+        background-image: url(img/owen\ bryce4.png);
     }
 
     /* GALLERY-section for mobile */
