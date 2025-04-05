@@ -24,21 +24,21 @@
                 <li><a class="btnn" href="About.html">About</i></a></li>
                 <li><a class="btnn" href="Resume.html">Resume</a></li>
                 <li class="menu">
-                    <a class="btnn" href="Projects.html">Projects <i class="fa-solid fa-caret-down"></i></a>
-                    <ul class="submenu">
+                    <button class="btnn" id="btnproject" herf="Projects.html">Projects <i class="fa-solid fa-caret-down"></i></button>
+                    <ul class="submenu hidden" id ="submenu">
                         <li><a href="Branding.html">Branding</a></li>
-                        <li><a href="#">create that UX</a></li>
-                        <li><a href="#">personal project</a></li>
-                        <li><a href="#">development project</a></li>
+                        <li><a href="create-that-UX.html">create that UX</a></li>
+                        <li><a href="personal-project.html">personal project</a></li>
+                        <li><a href="development-project.html">development project</a></li>
                         <li><a href="Aigeneration.html">AI generation</a></li>
                     </ul>
                 </li>
                 <li class="menu">
-                    <a class="btnn" href="Learning Outcomes.html" id="active">Learning Outcomes <i class="fa-solid fa-caret-down"></i></a>
-                    <ul class="submenu" id="submenu0">
-                        <li><a href="Interactive-Media-Products.html">LO1: Interactive Media Products</a></li>
-                        <li><a href="Iterative-Design.html">LO2: Iterative Design</a></li>
-                        <li><a href="Development&version-control.html">LO3: Development & version control</a></li>
+                    <button class="btnn" id="btnlearning">Learning Outcomes <i class="fa-solid fa-caret-down"></i></button>
+                    <ul class="submenu submenu0 hidden" id="submenu1">
+                        <li><a id="active"  href="Interactive-Media-Products.html">LO1: Interactive Media Products</a></li>
+                        <li><a href="Development&version-control.html">LO2: Development & version control</a></li>
+                        <li><a href="Iterative-Design.html">LO3: Iterative Design</a></li>
                         <li><a href="Professional-Standard.html">LO4: Professional Standard</a></li>
                         <li><a href="Personal-Leadership.html">LO5: Personal Leadership</a></li>
                     </ul>
@@ -221,5 +221,6 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

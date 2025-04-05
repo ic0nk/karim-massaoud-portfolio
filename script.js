@@ -1,11 +1,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const createCounter = (id, targetPercentage) => {
-        const counter = document.getElementById(id);
+    let createCounter = (id, targetPercentage) => {
+        let counter = document.getElementById(id);
         let count = 0;
 
-        const updateCount = () => {
-            const increment = 1; // Increment by 1%
+        let updateCount = () => {
+            let increment = 1; // Increment by 1%
             if (count < targetPercentage) {
                 count += increment;
                 counter.innerText = `${count}%`;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        let observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 updateCount();
                 observer.unobserve(counter);

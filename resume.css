@@ -21,7 +21,7 @@ body {
 
 /*header section*/
 header {
-    position: relative;
+    position: static;
     padding: 12px 0;
     padding-top: 27px;
     width: 100%;
@@ -103,17 +103,27 @@ header {
         background-color: var(--background-color);
         padding: 10px;
         border-radius: 10px;
-        display: none;
         z-index: 100;
     }
 
-    .head .menu:hover .submenu {
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 15px;
+        color: var(--font);
+        font-weight: bold;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .show {
         display: block;
     }
 
-    #submenu0::before {
-        left:165px;
-    }
+
 
     .submenu li {
         list-style: none;
@@ -128,6 +138,7 @@ header {
         text-transform: capitalize;
     }
 
+
     .submenu::before{
         content: "";
         border-left: 6px solid transparent;
@@ -140,11 +151,15 @@ header {
         top: -6px;
     }
 
+    .submenu0::before {
+        left:165px;
+    }
+
     .head > li {
         padding: 10px 15px;
     }
 
-    .head > li a {
+    .head > li a,button {
         display: inline-block;
         position: relative;
         font-weight: bold;
@@ -159,10 +174,6 @@ header {
 
     .head .menu a i {
         font-size: 15px;
-    }
-
-    .head li a#active {
-        color: var(--color1);
     }
 
     .head .btnn:hover {
@@ -180,7 +191,7 @@ header {
     }
 
 
-    .head li a::after {
+    .head li a::after,button::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -191,8 +202,12 @@ header {
         transition: 0.15s ease-in-out;
     }
 
-    .head li a:hover:after {
+    .head li a:hover:after,button:hover::after {
         width: 100%;
+    }
+
+    .head li a#active {
+        color: var(--color1);
     }
 
     .open-menu,
