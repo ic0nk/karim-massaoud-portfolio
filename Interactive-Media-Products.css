@@ -320,6 +320,7 @@ header {
 
     .grid-text p {
         height: 250px;
+        line-height: 25px;
         overflow: auto;
     }
     
@@ -365,6 +366,7 @@ header {
 
     .WHAT-I-LEARNED > p {
         margin: 30px 11%;
+        line-height: 29px;
         font-size: 20px;
         height: 300px;
         overflow: auto;
@@ -438,7 +440,6 @@ header {
     .flex-image img {
         cursor: pointer;
         border: solid 3px var(--color1);
-        object-fit: cover;
     }
 
     .flex-image img:hover {
