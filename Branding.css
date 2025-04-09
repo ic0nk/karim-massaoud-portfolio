@@ -324,9 +324,13 @@ header {
     }
     .card[for="c2"] {
         background-image: url(img/Owen\ bryce2.png);
+        background-size: cover;
+        background-position: bottom;
     }
     .card[for="c3"] {
         background-image: url(img/owen\ bryce4.png);
+        background-position: center;
+        background-size: cover;
     }
 
     /* GALLERY-section for mobile */
