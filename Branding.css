@@ -477,6 +477,7 @@ header {
         align-self: anchor-center;
     }
 
+
     #grid-text-line-none::after {
         display: none;
     }
