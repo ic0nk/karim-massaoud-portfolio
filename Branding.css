@@ -418,6 +418,7 @@ header {
 
     .branding p {
         color: var(--font);
+        line-height: 25px;
         font-weight: 500;
         height: auto;
         padding: 5px;
