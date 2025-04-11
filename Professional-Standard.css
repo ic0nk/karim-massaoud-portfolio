@@ -318,8 +318,14 @@ header {
     }
 
     .grid-text p {
+<<<<<<< HEAD
         height: auto;
         line-height: 25px;
+=======
+        height: 250px;
+        line-height: 25px;
+        overflow: auto;
+>>>>>>> 55ad3ea485e587c6842d9bf229eae82537ac920c
     }
     
     .grid-text {
@@ -493,6 +499,10 @@ header {
         box-shadow: 0 0 20px 3px var(--color1);
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55ad3ea485e587c6842d9bf229eae82537ac920c
     .page-number {
         text-align: center;
         margin: 30px auto 20px;
@@ -512,7 +522,10 @@ header {
         gap: 8px;
     }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 55ad3ea485e587c6842d9bf229eae82537ac920c
     .page-dot {
         width: 34px;
         height: 34px;
@@ -693,6 +706,7 @@ header {
         color: #888;
     }
     
+<<<<<<< HEAD
 /* scroll to top */
 #scroll-to-top {
     width: 50px;
@@ -715,6 +729,8 @@ header {
     transform: scale(1.1);
     box-shadow: 0 0 10px var(--color1);
 }
+=======
+>>>>>>> 55ad3ea485e587c6842d9bf229eae82537ac920c
 /* ------------------------------------------------------------------ */
 /* mobile responsive */
 @media (max-width: 600px) {
