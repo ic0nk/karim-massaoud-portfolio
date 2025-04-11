@@ -428,10 +428,6 @@ header {
         height: auto;
     }
 
-    #grid-text-line-none0 {
-        height: 200px;
-    }
-
     .branding p::-webkit-scrollbar {
         width: 10px;
     }
