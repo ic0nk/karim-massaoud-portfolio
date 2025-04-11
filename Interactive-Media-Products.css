@@ -318,15 +318,15 @@ header {
     }
 
     .grid-text p {
-        height: 250px;
+        height: auto;
         line-height: 25px;
-        overflow: auto;
     }
     
     .grid-text {
         justify-self: center;
         align-self: flex-start;
-        height: 350px;
+        height: auto;
+        margin-bottom: 30px;
     }
     
     #num span {
@@ -368,7 +368,6 @@ header {
         line-height: 29px;
         font-size: 20px;
         height: 300px;
-        overflow: auto;
         padding: 15px;
     }
 
