@@ -740,7 +740,7 @@ header {
     }
     
     .site-footer {
-        background: #050B0D;
+        background: var(--color);
         color: #eee;
         font-family: 'Ubuntu', sans-serif;
         width: 100%;
@@ -792,7 +792,7 @@ header {
 
     .footer-brand,
     .footer-section {
-        border-bottom: 1px solid #2b2b2b;
+        border-bottom: 1px solid #68686895;
         padding-bottom: 25px;
         width: 100%;
         max-width: 800px;
@@ -807,7 +807,7 @@ header {
     
     .footer-brand p {
         font-size: 0.95rem;
-        color: #aaa;
+        color: #ffffff;
         margin-bottom: 15px;
     }
     
@@ -856,7 +856,7 @@ header {
     }
     
     .footer-bottom {
-        background-color: #050B0D;
+        background-color: var(--color);
         padding: 20px 10px;
         font-size: 0.9rem;
         color: #888;
