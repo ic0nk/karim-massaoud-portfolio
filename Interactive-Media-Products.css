@@ -339,15 +339,16 @@ header {
 
     /* what i learned */
     .WHAT-I-LEARNED {
+        background-color: var(--color);
         color: var(--font);
         margin-top: 80px;
-        margin-bottom: 80px;
         height: auto;
+        padding-top: 30px;
     }
 
     .WHAT-I-LEARNED > h2 {
         font-size: 40px;
-        color: var(--color1);
+        color: var(--font);
         text-transform: uppercase;
         padding-left: 40px;
         position: relative;
@@ -397,6 +398,10 @@ header {
     .why > h2::after {
         width: 34%;
         left: 0;
+    }
+    .why {
+        margin-top: 0;
+        padding-top: 30px;
     }
 
     /* Feedback section */
@@ -715,6 +720,22 @@ header {
     transform: scale(1.1);
     box-shadow: 0 0 10px var(--color1);
 }
+
+/* gradient animation */
+.gradient {
+    background: linear-gradient(to right, var(--color1), var(--color0), var(--color), var(--color1));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+}
+
 /* ------------------------------------------------------------------ */
 /* mobile responsive */
 @media (max-width: 600px) {
